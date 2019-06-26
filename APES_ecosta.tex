@@ -306,7 +306,9 @@ For large $ p $, exhaustive variable selection in GLM is difficult:
 		
 		\item For $ p \approx 50 $, $ \mathcal{A}$ is approximately 1 quadrillion in size, which is too large to explore exhaustively. 
 		
-		\item \textbf{leaps} \citep{Furnival1974, Lumley2017} is a \underline{best subset} algorithm only exploring a subset of $ \mathcal{A} $ but guarantees to contain the global RSS-optimal model.
+		\item A \underline{best subset} algorithm limits our search to a subset of $ \mathcal{A} $ but it guarantees to contain the global RSS-optimal model.
+		
+		\item \textbf{leaps} \citep{Furnival1974, Lumley2017} discard ``branches" of models with insufficient fit. 
 	\end{itemize}
 
 \begin{figure}
@@ -318,22 +320,6 @@ For large $ p $, exhaustive variable selection in GLM is difficult:
 
 
 
-
-\begin{frame}{Best subsets search}
-		\setstretch{1.5}
-\begin{itemize}
-	
-	\item Application is limited by the number of LMs we can explore.
-	
-	\item For $ p \approx 50 $, $ \mathcal{A}$ is approximately 1 quadrillion in size.
-	
-	\begin{mdframed}[style=MyFrame]
-		A \underline{best subset} algorithm limits our search to a subset of $ \mathcal{A} $ but it guarantees to contain the global RSS-optimal model.
-	\end{mdframed}
-	
-	\item Mixed Integer Optimisation (MIO) is the fastest best subset algorithm to date.
-\end{itemize}
-\end{frame}
 
 
 
